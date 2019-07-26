@@ -2,18 +2,18 @@
 <widget xmlns     = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
         xmlns:android = "http://schemas.android.com/apk/res/android"
-        id        = "com.moodle.moodlemobile"
+        id        = "cn.edu.xjtlu.iceapp"
         versionCode = "37100"
         android-versionCode="37100"
         version   = "3.7.1">
-    <name>Moodle</name>
+    <name>ICE @ XJTLU</name>
 
     <description>
-        Moodle official app
+        The ICE App
     </description>
 
-    <author href="http://moodle.com" email="mobile@moodle.com">
-        Moodle Mobile team
+    <author href="https://ice.xjtlu.edu.cn" email="ice@xjtlu.edu.cn">
+        XJTLU
     </author>
 
     <edit-config target="CFBundleShortVersionString" file="*-Info.plist" mode="merge">
@@ -73,7 +73,7 @@
     <gap:splash src="splash.png" />
 
     <platform name="android">
-        <resource-file src="google-services.json" target="app/google-services.json" />
+<!--        <resource-file src="google-services.json" target="app/google-services.json" />	-->
         <icon src="resources/android/icon/drawable-ldpi-icon.png" density="ldpi"/>
         <icon src="resources/android/icon/drawable-mdpi-icon.png" density="mdpi"/>
         <icon src="resources/android/icon/drawable-hdpi-icon.png" density="hdpi"/>
@@ -99,7 +99,7 @@
     </platform>
 
     <platform name="ios">
-        <resource-file src="GoogleService-Info.plist" />
+<!--        <resource-file src="GoogleService-Info.plist" />	-->
         <icon src="resources/ios/icon/icon.png" width="57" height="57"/>
         <icon src="resources/ios/icon/icon@2x.png" width="114" height="114"/>
         <icon src="resources/ios/icon/icon-40.png" width="40" height="40"/>
@@ -142,7 +142,7 @@
     <gap:plugin name="cordova-plugin-badge" source="npm" spec="^0.8.8" />
     <gap:plugin name="cordova-plugin-camera" source="npm" spec="^4.0.3" />
     <gap:plugin name="cordova-plugin-customurlscheme" source="npm" spec="^4.4.0">
-        <param name="URL_SCHEME" value="moodlemobile" />
+        <param name="URL_SCHEME" value="iceapp" />
     </gap:plugin>
     <gap:plugin name="cordova-plugin-device" source="npm" spec="^2.0.2" />
     <gap:plugin name="cordova-plugin-file" source="npm" spec="^6.0.1" />
@@ -165,11 +165,11 @@
         <variable name="ANDROID_SUPPORT_V13_VERSION" value="27.+" />
         <variable name="FCM_VERSION" value="17.5.+" />
     </gap:plugin>
-
+<!--
     <edit-config file="AndroidManifest.xml" target="/manifest/application/activity[@android:launchMode='singleTop']" mode="merge">
         <activity android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale|screenLayout|smallestScreenSize" android:debuggable="true"></activity>
     </edit-config>
-
+-->
     <!-- See MOBILE-892 -->
     <preference name="permissions" value="none"/>
 
